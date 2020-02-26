@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome script -->
+    <script src="https://kit.fontawesome.com/92d1262507.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Link -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <title>MailApp_LoginPart</title>
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html"><i class="fa fa-home mr-1" aria-hidden="true"></i> Home</a>
+        <a href="#"><i class="fa fa-building mr-1" aria-hidden="true"></i> About</a>
+        <a href="#"><i class="fa fa-wrench mr-1" aria-hidden="true"></i> Services</a>
+        <a href="#"><i class="fa fa-phone mr-1" aria-hidden="true"></i> Contact</a>
+        <button class="login" onclick="showModal()">Login</button>
+    </div>
+
+
+    <!-- Login Modal -->
+    <div id="modalId" class="modal">
+
+        <form class="modal-content animate" onsubmit="submitFormLogin()" method="dialog" autocomplete = "off">
+
+            <div class="imgContainer">
+                <span class="close" title="Close Modal" onclick="hideModal('')">&times;</span>
+                <img src="avatar.png" alt="avatar" class="avatar">
+            </div>
+
+            <div class="formContainer">
+                <label for="username"><b>E-Mail</b></label>
+                <input id="loginName" type="text" name="username" placeholder="Enter E-Mail"  onchange="getValueLogin(this)" required>
+
+                <label for="password"><b>Password</b></label>
+                <input id="loginPassword" type="password" name="password" placeholder="Enter Password"  onchange="getValueLogin(this)" required>
+
+                <button type="submit">Login</button>
+
+                <label>
+                    <input type="checkbox" checked="checked">Remember me
+                </label>
+            </div>
+
+            <div class="formContainer" style="background: #f1f1f1">
+                <p> Have you not an account yet?
+                    <span class="signup" onclick= "signUpInLogin()">Sign Up</span>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="modalId2" class="modal">
+
+        <form class="modal-content animate" onsubmit= "signUp()" autocomplete = "off">
+
+            <div class="formContainer">
+                <div class="imgContainer">
+                    <span onclick="hideModal('2')" class="close" title="Close Modal">&times;</span>
+                    <img src="avatar.png" alt="avatar" class="avatar">
+                </div>
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account</p>
+
+                <!-- <label for="email"><b>E-Mail</b></label>
+                <input id="userNameSignUp" type="email" placeholder="Enter E-Mail" name="email" onchange="getValueSignUp(this)" minlength="4" required> -->
+
+                <label for="email"><b>E-Mail</b></label>
+                <input id="userNameSignUp" type="text" placeholder="Enter E-Mail" name="username" onchange="getValueSignUp(this)" minlength="5" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" onchange="getValueSignUp(this)" required>
+
+                <label for="passwordRepeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="passwordRepeat" onchange="getValueSignUp(this)" required>
+
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a></p>
+
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Bootstrap Link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

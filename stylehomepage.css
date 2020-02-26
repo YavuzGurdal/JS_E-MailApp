@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* compose */
+#compose {
+    border: 2px solid rgba(48, 111, 212, 0.746);
+    border-radius: 25px;
+    box-shadow: #2d4251 1px 1px 80px;
+}
+
+
+/* These 3 #mailList ...  in inBox and in function getEmails() */
+#mailList span {
+    width: 30%;
+    padding: 1px;
+    text-align: center;
+    font-size: 1rem;
+    float: right;
+    color: white;
+    background: rgba(50, 130, 204, 0.561);
+    border: 0.5px solid white;
+    border-radius: 7px;
+    box-shadow: black 1px 1px 8px;   
+}
+
+#mailList button {
+    /* box-shadow: #2d4251 5px 5px 5px; */
+    box-shadow: #2d4251 1px 1px 20px;
+}
+
+#mailList button:hover {
+    transform: scale(1.05);
+    /* üzerine gelince yazı boyutunun 1.05 katı olsun */
+    
+    text-shadow: 1px 1px 20px rgb(10, 93, 170);
+    transition: scale 2s linear;
+} 
+
+
+/*in compose (mail details table th) */
+.modal div table tr th{
+    width: 7rem;
+}
+
+/* This is in inBox */
+#container {
+    width: 400px;
+}
